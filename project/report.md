@@ -11,7 +11,7 @@ KeyError: "2 required columns are missing from the provided dataset to transform
 So I removed the two columns metioned above from the training data and It works now. 
 
 ### What was the top ranked model that performed?
-The top ranked model is WeightedEnsemble_L3 which got -53.150441 score_val in training and 1.7958 score in testing phase. 
+The top ranked model is ```WeightedEnsemble_L3``` which got -53.150441 score_val in training and 1.7958 score in testing phase. 
 
 ## Exploratory data analysis and feature creation
 ### What did the exploratory analysis find and how did you add additional features?
@@ -22,17 +22,18 @@ After feature engineering, I got from 1.7958(previous model score) to 0.46465 sc
 
 ## Hyper parameter tuning
 ### How much better did your model preform after trying different hyper parameters?
-For me it didn't get better. I got from 0.45465 to 0.52633 score which means we got a little worse model than before.
+For me, it didn't get better. I got from 0.45465 to 0.52633 score which means we got a little worse model than before.
 
 ### If you were given more time with this dataset, where do you think you would spend more time?
 I don't think so. The key point is about the quality of the data not the quality of the model. When we have a not big enough data which may haven't rich features, We'll face with some unavoidable limitation on model performance. I think we have data-centric limitations for this problem and overworking on model improvement won't give a remarkable outcome.
 
 ### Create a table with the models you ran, the hyperparameters modified, and the kaggle score.
-|model|hpo1|hpo2|hpo3|score|
-|--|--|--|--|--|
-|initial|default vals|default vals|default vals|1.7958|
-|add_features|default vals|default vals|default vals|0.46465|
-|hpo|'GBM: num_boost_round: 100'|'GBM: num_boost_round: 200'|'NN: {num_epochs: 10, learning_rate: 1e-4, 1e-2, activation: relu, softrelu, tanh}'|0.52633|
+|  model |  hpo1 | hpo2  | hpo3  |  score |
+|---|---|---|---|---|
+| initial  |  default vals |  default vals |  default vals | 1.7958  |
+|  add_features |  default vals | default vals  | default vals  | 0.46465  |
+|  hpo |  'GBM: num_boost_round: 100' |  'GBM: num_boost_round: 200' | 'NN: {num_epochs: 10, learning_rate: 1e-4, 1e-2, activation: relu, softrelu, tanh}'  | 0.52633  |
+
 
 ### Create a line plot showing the top model score for the three (or more) training runs during the project.
 
@@ -43,4 +44,5 @@ I don't think so. The key point is about the quality of the data not the quality
 ![model_test_score.png](img/model_test_score.png)
 
 ## Summary
-TODO: Add your explanation
+In this project, we got familiar with the stunning concept of AutoML which is capsualted in AutoGluon library. We also experienced EDA and feature engineering stuff on our data; From this preprocessing and exploration, we understood the power of the data quality which can give more better results than the model quality. This is a research interest of some researchers in AI & ML community which is named Data-Centric AI or DCAI which emphasizes on the data quality instead of model quality.
+
