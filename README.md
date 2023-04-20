@@ -3,7 +3,7 @@
 ## Overview
 In this project, we use the AutoGluon library to train several models for the [Bike Sharing Demand](https://www.kaggle.com/competitions/bike-sharing-demand/overview) competition in Kaggle. You will be using Tabular Prediction to fit data from CSV files provided by the competition. 
 
-we take an iterative approach to improve our model and the results. This will be accomplished by adding more features to the dataset and tuning some hyperparameters available with AutoGluon.
+We take an iterative approach to improve our model and the results. This will be accomplished by adding more features to the dataset and tuning some hyperparameters available with AutoGluon.
 
 **Note**: This repository relates to AWS Machine Learning Engineer nanodegree provided by Udacity.
 
